@@ -16,6 +16,10 @@ while True:
 
     if(cancela == 'aberta'):
         arduino.write(b'1')
+        time.sleep(10)
+        cancela_ref.set({
+            u'cancela': u'fechada',
+        }, merge=True)
     else:
         arduino.write(b'0')
 
